@@ -18,6 +18,9 @@ def mail_response(response, email):
 
     your_google_email = os.getenv("SENDER_EMAIL")
     your_google_email_app_password = os.getenv("EMAIL_key")
+    
+    your_google_email = str(your_google_email)
+    your_google_email_app_password = str(your_google_email_app_password)
 
     your_google_email = your_google_email.replace('\n', '')
     your_google_email_app_password = your_google_email_app_password.replace('\n', '')
