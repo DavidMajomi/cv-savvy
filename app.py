@@ -11,6 +11,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+your_google_email = os.getenv("SENDER_EMAIL")
+your_google_email_app_password = os.getenv("EMAIL_key")
 
 
 def mail_response(response, email):
@@ -90,7 +92,24 @@ if submit1:
         st.empty()
         
 
-        mail_response(response, email)
+        your_google_email = str(your_google_email)
+        your_google_email_app_password = str(your_google_email_app_password)
+
+        your_google_email = your_google_email.replace('\n', '')
+        your_google_email_app_password = your_google_email_app_password.replace('\n', '')
+
+        
+        
+        gmail.username = your_google_email
+        gmail.password = your_google_email_app_password
+
+        # Send an email
+        gmail.send(
+            subject="Your Resume Insights",
+            receivers=email,
+            text=response,
+            html=""
+        )
       
 
         st.subheader("Your resume has been submitted, you should recieve an email shortly")
