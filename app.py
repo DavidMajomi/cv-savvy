@@ -88,31 +88,31 @@ if submit1:
         
         response=get_gemini_response(intstruction + pdf_content)
         
-        # st.("Review")
-        st.empty()
+        st.write(response)
+        # st.empty()
         
 
-        your_google_email = str(your_google_email)
-        your_google_email_app_password = str(your_google_email_app_password)
+        # your_google_email = str(your_google_email)
+        # your_google_email_app_password = str(your_google_email_app_password)
 
-        your_google_email = your_google_email.replace('\n', '')
-        your_google_email_app_password = your_google_email_app_password.replace('\n', '')
+        # your_google_email = your_google_email.replace('\n', '')
+        # your_google_email_app_password = your_google_email_app_password.replace('\n', '')
 
         
         
-        gmail.username = your_google_email
-        gmail.password = your_google_email_app_password
+        # gmail.username = your_google_email
+        # gmail.password = your_google_email_app_password
 
-        # Send an email
-        gmail.send(
-            subject="Your Resume Insights",
-            receivers=email,
-            text=response,
-            html=""
-        )
+        # # Send an email
+        # gmail.send(
+        #     subject="Your Resume Insights",
+        #     receivers=email,
+        #     text=response,
+        #     html=""
+        # )
       
 
-        st.subheader("Your resume has been submitted, you should recieve an email shortly")
+        # st.subheader("Your resume has been submitted, you should recieve an email shortly")
     else:
        st.write("Please enter all details")
        
