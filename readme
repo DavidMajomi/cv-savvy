@@ -1,0 +1,15 @@
+# CV Savvy: AI-Powered Resume Review
+
+## Overview
+
+CV Savvy is a streamlit application that allows users to upload their resumes in PDF format for review powered by Google's generative AI. The feedback is based on key resume aspects like the STAR method, structure, length, and overall professionalism. The AI provides critical insights and suggestions for improvement, including a score for the resume on a scale of 1 to 10.
+
+Once the review is complete, users receive an email with detailed feedback, making it easy to take action on improving their resume.
+
+### Features
+- **Resume Upload**: Upload your resume as a PDF file for review.
+- **AI-Powered Feedback**: Get detailed insights on your resume based on the STAR method, structure, length, and content.
+- **Resume Score**: Receive an objective resume score out of 10 to gauge your resume's quality.
+- **Email Notification**: Receive the review via email, so you can refer to it later.
+- **Personalized Feedback**: The AI gives constructive criticism with a focus on what needs improvement.
+
